@@ -1,0 +1,14 @@
+{
+    "plugins": [
+        "ga"
+    ],
+    "pluginsConfig": {
+        "ga": {
+            "token": "UA-83944281-1",
+            "configuration": "auto"
+        }
+    },
+    "styles": {
+        "pdf": "styles/pdf.css"
+    }
+}
