@@ -1,6 +1,6 @@
 # Getting credentials for Google Analytics API
 
-> **Note**: you can use default credentials include in googleAnalyticsR package. But this API quota is shared for all googleAnalyticsR users. To quarantee that API quota is only for you - please create your own credential. I've described this process below.
+> **Note**: you can use default credentials included in googleAnalyticsR package. But this API quota is shared for all googleAnalyticsR users. To guarantee that API quota is only for you - please create your own credentials. I've described this process below.
 
 
 
@@ -36,5 +36,5 @@ Get credentials:
 
 ![Get credentials](developers_console_get_credentials.png)
 
-Save **Client ID** and **Client Secret**. You need this to configure library getting data from Google Analytics to R.
+Save **Client ID** and **Client Secret**. You will need this to configure the library that collects data from Google Analytics to R.
 

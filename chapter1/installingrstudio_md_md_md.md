@@ -10,23 +10,23 @@ You can use R Studio for free under AGPL 3. Paid version with more functionality
 
 ## Installing extra packages
 
-One of the biggest advantage of R are thousands libraries which extend R functionality.
+One of the biggest advantage of R are thousands of libraries which extend R functionality.
 
-You can browse this packages on CRAN repository.
+You can browse these packages on CRAN repository.
 
-To inastall new package in R type:
+To install new package in R, type:
 
 ```r
 install.packages("package name")
 ```
 
-For example to install `ggplot2` plotting library type:
+For example to install `ggplot2` plotting library, type:
 
 ```r
 install.packages("ggplot2")
 ```
 
-After installing and before using package you should load it to current session:
+After installing and before using the package you should load it to the current session:
 
 ```r
 library("ggplot2")
