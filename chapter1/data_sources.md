@@ -26,7 +26,7 @@ You can also contact your University, family and friends offering them your help
 
 ### Google Analytics demo account
 
-Google Analytics team prepares a demo account with the dataset from Google Merchandise Store. You can access this account here:
+Google Analytics team prepared a demo account with the dataset from Google Merchandise Store. You can access this account here:
 
 [support.google.com\/analytics\/answer\/6367342](https://support.google.com/analytics/answer/6367342)
 

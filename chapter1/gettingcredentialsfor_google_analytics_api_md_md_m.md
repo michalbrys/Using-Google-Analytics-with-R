@@ -36,5 +36,5 @@ Get credentials:
 
 ![Get credentials](developers_console_get_credentials.png)
 
-Save **Client ID** and **Client Secret**. You will need this to configure the library that collects data from Google Analytics to R.
+Save **Client ID** and **Client Secret**. You will need this to configure the library that downloads data from Google Analytics into R.
 

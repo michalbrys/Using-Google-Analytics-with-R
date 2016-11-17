@@ -30,7 +30,7 @@ You can change the data sharing settings (Note: *disabling the options will not 
 
 To complete the registration process, click on **Get Tracking ID** and accept [Google Analytics Terms of Service](http://www.google.pl/analytics/terms/).
 
-After this you will see instructions on how to install **Google Analytics Tracking Code** in your website:
+Next, you will see the instructions on how to install **Google Analytics Tracking Code** in your website:
 
 ![Google Analytics install](google_analytics_gatc.png)
 ### Install Google Analytics Tracking Code (GATC) in your website
