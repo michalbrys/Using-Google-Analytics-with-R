@@ -1,6 +1,6 @@
-# Installing Google Analytics on your website
+# Installing Google Analytics in your website
 
-Go to **Google Analytics > Admin > Tracking Info > Tracking Code** and get tracking Code (GATC).
+Go to **Google Analytics > Admin > Tracking Info > Tracking Code** and get the tracking Code (GATC).
 
 Example code:
 
@@ -16,8 +16,8 @@ Example code:
 </script>
 ```
 
-Install tracking code on your website, between `<head></head>` tags, on every page you want to track.
+Install the tracking code in your website, between `<head></head>` tags, in every page you want to track.
 
-To do this you should have access to your website source code or contact with your webmaster.
+To do this you should access your website source code or contact with your webmaster.
 
-Alternatively you can install Google Analytics via [Google Tag Manager](https://tagmanager.google.com). I personally recommend that way because it will save you a lot of time in future :)
+Alternatively you can install Google Analytics via [Google Tag Manager](https://tagmanager.google.com). I personally recommend it that way because it will save you a lot of time in the future :)

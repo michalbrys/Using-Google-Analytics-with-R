@@ -1,6 +1,6 @@
 # Summary
 
-In this chapter you may learn:
-* How to create account, configure and install Google Analytics on your website.
+In this chapter you have learned:
+* How to create an account, configure and install Google Analytics on your website.
 * How to download and set up R Studio.
-* How to get credentials to download data from Google Analytics into R.
+* How to prepare the credentials for downloading data from Google Analytics into R.

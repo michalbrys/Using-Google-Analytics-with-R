@@ -10,30 +10,30 @@ If you don't have any accounts connected with your Google Account you will see t
 
 ### Account details
 
-To create **Google Analytics** account fill form with:
+To create **Google Analytics** account fill in the form with:
 
 - **Account Name**. (*Note: One Account may have a few tracking IDs so it can be one Account per one organization/company with many websites.*)
 
-In next steps create your **unique tracking ID**:
+In the next step create your **unique tracking ID**:
 
-- Insert **Website Name**, **Website URL** and **Reporting Time Zone**. (*Note: Correct time zone is critically important - your data will be divided into dates in reports using this value*).
+- Insert **Website Name**, **Website URL** and **Reporting Time Zone**. (*Note: Correct time zone is crucially important - in the reports your data will be divided by date using this value*).
 
 ![Google Analytics account configuration](google_analytics_configuration.png)
 
 ### Data Sharing Settings
 
-You can change data sharing settings (Note: *disable this will not have impact of data collection*).
+You can change the data sharing settings (Note: *disabling the options will not have any impact on the data collection*).
 
 ![Google Analytics data sharing settings](google_analytics_data_sharing.png)
 
-### Complete registration process
+### Complete the registration process
 
-To complete registration process, click **Get Tracking ID** and accept [Google Analytics Terms of Service](http://www.google.pl/analytics/terms/).
+To complete the registration process, click on **Get Tracking ID** and accept [Google Analytics Terms of Service](http://www.google.pl/analytics/terms/).
 
-After this you will see instructions how to install **Google Analytics Tracking Code** on your website:
+Next, you will see the instructions on how to install **Google Analytics Tracking Code** in your website:
 
 ![Google Analytics install](google_analytics_gatc.png)
-### Install Google Analytics Tracking Code (GATC) on your website
+### Install Google Analytics Tracking Code (GATC) in your website
 
 To start collecting data from your website you need to insert this code on every page. Personally I recommend to install it via [Google Tag Manager](https://tagmanager.google.com).
 
