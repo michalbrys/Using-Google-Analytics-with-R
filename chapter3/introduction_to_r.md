@@ -1,8 +1,8 @@
 # Introduction to R
 
-Try type in **console** (*left down corner window in R Studio*) some basic instructions. 
+Try typing in the **console** (*the lower left corner window in R Studio*) some basic instructions. 
 
-Commit instructions via press ```[enter]``` button.
+Commit the instructions by pressing ```[enter]``` button.
 
 ![R Studio interface](r-studio.png)
 
@@ -18,7 +18,7 @@ Commit instructions via press ```[enter]``` button.
 
 ## Using variables
 
-You can assign value to variable using `<-` (more popular) or `=` operator. You can find some basic examples below.
+You can assign a value to a variable using `<-` (more popular) or `=` operator. You can find some basic examples below.
 
 ### Numeric variables
 ```r
@@ -45,11 +45,11 @@ You can assign value to variable using `<-` (more popular) or `=` operator. You 
 
 More popular than one dimensional vector is multidimensional data structure called `data.frame`.
 
-**Data returned from Google Analytics API query we'll also save as data.frame**
+**Data returned from Google Analytics API query will also be saved as a data.frame**
 
 #### Creating data frame
 
-Let's create simple data frame (i.e. number of sessions by city in 2016-01-01)
+Let's create a simple data frame (i.e. number of sessions by city in 2016-01-01)
 
 ```r
 df <- data.frame(
@@ -61,7 +61,7 @@ df <- data.frame(
                 )
 ```
 
-To display all data frame type data frame name: `df`
+To display data frame type the data frame's name: `df`
 
 ```r
 > df
@@ -78,9 +78,9 @@ To display all data frame type data frame name: `df`
 7 20160101   Sydney       20
 ```
 
-#### Basic operations on data frame
+#### Basic operations on data frames
 
-To **preview data frame** (by default first 6 rows, useful in bigger data sets):
+To **preview a data frame** (by default first 6 rows, which IS useful for bigger datasets):
 
 ```r
 > head(df)
@@ -96,7 +96,7 @@ To **preview data frame** (by default first 6 rows, useful in bigger data sets):
 6 20160101   Zurich       60
 ```
 
-To **display column names** of data frame:
+To **display column names** of a data frame:
 ```r
 > colnames(df)
 ```
@@ -162,4 +162,4 @@ Select only **one element**:
 Levels: 20160101
 ```
 
-This basic operations is enough to start your journey with R language :)
+These basic operations are enough to start your journey with R language :)

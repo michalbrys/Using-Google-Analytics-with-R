@@ -1,8 +1,8 @@
 # Data visualization in R
 
-We'll make some exploratory data analysis by visualizing data from Google Analytics in R.
+Let's make some exploratory data analysis in R by visualizing the data from Google Analytics.
 
-R has big range of visualizing packages. My favourite is `ggplot2`.
+R has a big range of visualizing packages. My favourite is he `ggplot2` package.
 
 ## Package ggplot2
 
@@ -17,24 +17,24 @@ This is my favourite visualization package in R because of:
 * Nice charts design.
 * Flexibility.
 * Wide range charts types.
-* Extending plugins i.e. `ggtheme`.
+* Extended plugins i.e. `ggtheme`.
 
-You can also check alternatives like [Plotly](https://plot.ly/r/) or [R Base Graphic](https://flowingdata.com/2016/03/22/comparing-ggplot2-and-r-base-graphics/).
+You can also check out the alternatives like [Plotly](https://plot.ly/r/) or [R Base Graphic](https://flowingdata.com/2016/03/22/comparing-ggplot2-and-r-base-graphics/).
 
-Examples in this book is made with `ggplot2`.
+All of the examples presented in this book are made with the use of `ggplot2`.
 
 ## Using ggplot2
 
-### Download data to visualize in chart
+### Download data to visualize it in the chart
 
-In first step install \(if necessary\) and load package in current session.
+In the first, step install \(if necessary\) and load the packages in the current session:
 
 ```r
 install.packages("ggplot2")
 library("ggplot2")
 ```
 
-Next build query do fetch data about date and number of session:
+Next, build the query to fetch the data pointing out the date and the number of session that you want to download:
 
 ```r
 gadata <- google_analytics(id = ga_id, 
@@ -44,7 +44,7 @@ gadata <- google_analytics(id = ga_id,
                            max = 5000)
 ```
 
-Display first 6 rows of result:
+Display first 6 rows of the results:
 
 ```r
 head(gadata)
@@ -62,28 +62,28 @@ head(gadata)
 
 ### Scatter plot
 
-Plot data in time \(scatter plot\)
+Let's plot the data againts the time \(scatter plot\):
 
 ```r
 ggplot(gadata, aes(x=date, y=sessions)) +
   geom_point()
 ```
 
-As a result you will get basic scatter plot with **sessions in time**:
+As a result you will get a basic scatter plot with **the number of sessions against the time**:
 
 ![Scatter plot - sessions in time](ga_scatter_plot.png)
 
-Poin means number of sesions in particular day.
+A point stands for a number of sesions in a particular day.
 
-As you see this plot isn't very nice because of a-axis labels. You can fix this using 90-degree pivot.
+As you can see this plot isn't very readable because of x-axis labels. You can fix this using 90-degree pivot.
 
-Add line:
+Add the following line:
 
 ```r
 theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ```
 
-So complete example with pivoted x-axis labels:
+To complete the example with rotated x-axis labels, use:
 
 ```r
 ggplot(gadata, aes(x=date, y=sessions)) +
@@ -91,11 +91,11 @@ ggplot(gadata, aes(x=date, y=sessions)) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ```
 
-And the result:
+And the result is the following:
 
 ![Scatter plot styled - sessions in time](ga_scatter_plot_styled.png)
 
-You can also change point size depending on number of sessions by adding:
+You can also change the size of points, depending on the number of sessions, by adding:
 
 ```r
 size = sessions
@@ -107,11 +107,11 @@ ggplot(gadata, aes(x=date, y=sessions, size = sessions)) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ```
 
-And the result:
+And the result is the following:
 
 ![Scatter plot with size - sessions in time](ga_scatter_plot_size.png)
 
-You can also change color of points adding:
+You can also change the color of the points by adding:
 
 ```r
 color = sessions
@@ -119,7 +119,7 @@ color = sessions
 
 \(the lighter color the highest number of sessions\).
 
-Complete code:
+The complete code presents itself as:
 
 ```r
 ggplot(gadata, aes(x=date, y=sessions, size = sessions, color = sessions)) +
@@ -127,30 +127,30 @@ ggplot(gadata, aes(x=date, y=sessions, size = sessions, color = sessions)) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ```
 
-And the result:
+And the result is the following:
 
 ![Scatter plot coloured - Sessions in time](ga_scatter_plot_colour.png)
 
-This type of scatter plot is called **bubble chart**.
+This type of scatter plot is called a **bubble chart**.
 
 ### Line chart
 
-Plot data in time \(line chart\) with some styles:
+Let's plot the data against the time \(line chart\) with some styles:
 
 ```r
 ggplot(gadata,aes(x=date,y=sessions,group=1)) + 
   geom_line() + 
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) 
-  # some styles to pivot x-axis labels
+  # some styles to rotate x-axis labels
 ```
 
-As a result you will get line chart with **sessions in time**:
+As a result you will get line chart with **the number of sessions against the time**:
 
 ![Line chart - sessions in time](ga_line_chart.png)
 
-### Scatter plot with trend line
+### Scatter plot with a trend line
 
-Sometimes you want to aggregate data and see what is trend?
+Sometimes you want to aggregate the data and see what is the trend.
 
 ```r
 gadata <- google_analytics(id = ga_id, 
@@ -160,7 +160,7 @@ gadata <- google_analytics(id = ga_id,
                            max = 5000)
 ```
 
-And now we can plot data points with added trend line:
+Now we can plot the data points with a trend line added:
 
 ```r
 ggplot(data = gadata, aes(x = gadata$date,y = gadata$sessions) ) + 
@@ -171,13 +171,13 @@ ggplot(data = gadata, aes(x = gadata$date,y = gadata$sessions) ) +
 
 ![Scatter plot with trend line](Rplot05.png)
 
-In this plot you can see, that trend is growing :\)
+In this plot you can see that the trend is growing :\)
 
 ### Box plot
 
-To make some exploratory data analysis, you can visualize your traffic in different day od week. Is your website traffic is seasonal? When are more crowded days? Let's check creating **box plot** which will illustrate distribution of number of sessions in every day of week:
+To make some exploratory data analysis, you can visualize your traffic against different days of week. Such a chart may help you answer the following quetions: Is your website traffic seasonal? Which are more crowded days? Let's create a **box plot** which will illustrate a distribution of number of sessions in every day of week:
 
-Build query to download data:
+Build the query to download data:
 
 ```r
 gadata <- google_analytics(id = ga_id, 
@@ -187,7 +187,7 @@ gadata <- google_analytics(id = ga_id,
                            max = 5000)
 ```
 
-And vizualize it on boxplot:
+And vizualize it using a boxplot:
 
 ```r
 ggplot(data = gadata, aes(x = dayOfWeek, y = sessions)) + 
@@ -196,7 +196,7 @@ ggplot(data = gadata, aes(x = dayOfWeek, y = sessions)) +
 
 ![Sessions vs. dayOfWeek](Rplot03.png)
 
-In Google Analytics, number of days are named with convention:
+In Google Analytics, number of days are named with the following convention:
 
 ```r
 0 - Sunday
@@ -208,11 +208,11 @@ In Google Analytics, number of days are named with convention:
 6 - Saturday
 ```
 
-So in this case, the highest traffic was on Thursday. Fridays are also not bad :\)
+In this case, we can see that the highest traffic was on Thursday. Fridays are also not bad :\)
 
-## Source code
+## The source code
 
-Complete code for this example in GitHub repository:
+The complete source code of the examples showed above is in my GitHub repository:
 
 [github.com\/michalbrys\/R-Google-Analytics\/blob\/master\/3\_data\_visualization.R](https://github.com/michalbrys/R-Google-Analytics/blob/master/3_data_visualization.R)
 

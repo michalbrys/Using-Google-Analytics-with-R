@@ -1,3 +1,3 @@
 # First steps
 
-In this chapter you will set up your environment installing R Studio, creating Google Analytics account and make connection via API between both tools.
+In this chapter I will lead you through the process of setting up the environment: installing R Studio, creating Google Analytics account and creating the connection via API between both tools.
