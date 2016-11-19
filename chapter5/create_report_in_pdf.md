@@ -1,18 +1,18 @@
-# Create report
+# Create a report
 
-To generate basic report template use this code. This report will contain title, sessions in time scatter plot from `chapter 2` \([Data visualization in R](chapter3/data_visualization_in_r.md)\).
+To generate a basic report template use this code. This report will contain a title and the scatter plot from `chapter 2` \([Data visualization in R](chapter3/data_visualization_in_r.md)\) of number of sessions against time.
 
 ## Create new RMarkdown report
 
 In R Studio, navigate to `File > New file > R Markdown`.
 
-You will see window with some basic configuration options. Change this values or you can do this later directly in code.
+You will see a window with some basic configuration options. Change those values or you can do that later directly in the code.
 
 ![R Markdown config](Screen Shot 2016-04-27 at 09.14.35.png)
 
-You can select output of your report. Select `HTML`,`PDF` or `Word`.
+You can select the output of your report. Select `HTML`,`PDF` or `Word`.
 
-Click OK and delete sample code.
+Click OK and delete the sample code.
 
 ## Prepare custom report with Google Analytics data
 
@@ -39,7 +39,7 @@ Copy this code to R Studio and click `Knit HTML` icon. This code will generate H
     ```
 
     ### Sessions from `r date_start` to `r date_end`
-    This chart contains scatter plot of sessions number in date range.
+    This chart contains the scatter plot of number of sessions against date range.
 
     ```{r, echo=FALSE, warning=FALSE,error=FALSE, message=FALSE }
     gadata <- google_analytics(id = ga_id, 
@@ -48,7 +48,7 @@ Copy this code to R Studio and click `Knit HTML` icon. This code will generate H
                                dimensions = c("date"),
                                max = 5000)
 
-    # scatter plot with trend line
+    # scatter plot with a trend line
     ggplot(data = gadata, aes(x = gadata$date,y = gadata$sessions) ) + 
       geom_point() + 
       geom_smooth() +
@@ -56,7 +56,7 @@ Copy this code to R Studio and click `Knit HTML` icon. This code will generate H
     ```
 
     ### Users engagement by device type
-    This chart contains bar chart with avgSessionSuriation  divided by device type.
+    This chart contains a bar chart with avgSessionSuriationdivided by device type.
 
     ```{r, echo=FALSE, warning=FALSE,error=FALSE, message=FALSE }
     gadata2 <- google_analytics(id = ga_id, 
@@ -66,26 +66,26 @@ Copy this code to R Studio and click `Knit HTML` icon. This code will generate H
                                max = 5000)
 
 
-    #plot sessions with deviceCategory
+    #plot sessions against deviceCategory
     ggplot(gadata2, aes(deviceCategory, sessions)) +   
       geom_bar(aes(fill = deviceCategory), stat="identity")
 
-    #plot avgSessionDuration with deviceCategory
+    #plot avgSessionDuration against deviceCategory
     ggplot(gadata2, aes(deviceCategory, avgSessionDuration)) +   
       geom_bar(aes(fill = deviceCategory), stat="identity")
     ```
 
-## Result
+## Results
 
-As a result you'll get complete HTML file with report. You can also generate PDF file.
+As a result you'll get a complete HTML file with a report. You can also generate PDF file.
 
-For recurring reporing you can only change dates :\)
+For recurring reporting you can only change dates :\)
 
 ![](/assets/report.png)
 
 ## Source code
 
-Complete code for this example in GitHub repository:
+The complete source code of the examples showed above is in my GitHub repository:
 
 [github.com\/michalbrys\/R-Google-Analytics\/blob\/master\/8\_rmarkdown\_report.Rmd](https://github.com/michalbrys/R-Google-Analytics/blob/master/8_rmarkdown_report.Rmd)
 

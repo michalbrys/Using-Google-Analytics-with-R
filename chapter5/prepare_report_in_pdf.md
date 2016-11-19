@@ -1,6 +1,6 @@
 # Introduction to R Markdown
 
-You can use markdowns as follow:
+You can use markdown using the following examples:
 
 ### R Markdown options
 
@@ -19,7 +19,7 @@ output: pdf_document
 ```r
 ```
 
-If you don't want to display code in chunk in output file, use `echo = FALSE` option.
+If you don't want to display the code of the chunk in the output file, use `echo = FALSE` option.
 
     ```{r, echo=FALSE}
     # R Code
@@ -80,13 +80,13 @@ will produce
 ```
 *italic*
 **bold**
-***bold+italic**
+**_bold+italic_**
 ```
 
 will produce
 
-_italic  _
-**bold  **
+_italic_
+**bold**
 **_bold+italic_**
 
 ### More resources
