@@ -1,38 +1,38 @@
 # Clustering \(k-means\)
 
-Power of R is wide range of packages with advanced algorithms ready-to-use. In this example we'll use **k-means** for custom users segmentation.
+The power of R is based on a wide range of packages with advanced algorithms ready-to-use. In this example we'll use the **k-means** algorithm for custom users segmentation.
 
 > **Unsupervised learning: k-Means**
 > _k-means clustering aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean \(Source: __****[Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering)****__\)
 > _
 
-Because this example needs custom instalation of Google Analytics tracking \(content grouping, fingerprint\), I've prepared special dataset for thus purpose. You can find complete code below.
+Because this example needs a custom installation of Google Analytics tracking \(content grouping, fingerprint\), I've prepared a special dataset for this purpose. You can find the complete code below.
 
 ```r
 # K-Means Cluster Analysis
 
 # load data into R
-# you can download data from Google Analytics API or download sample dataset
+# you can download data from Google Analytics API or download the sample dataset
 # source('ga-connection.R')
 
-# download and preview sample dataset
+# download and preview the sample dataset
 download.file(url="https://raw.githubusercontent.com/michalbrys/R/master/users-segmentation/sample-users.csv",
               "sample-users.csv",
               method="curl")
 gadata <- read.csv(file="sample-users.csv", header=T, row.names = 1)
 head(gadata)
 
-# clustering users in 3 groups
+# clustering users into 3 groups
 fit <- kmeans(gadata, 3)
 
-# get cluster means 
+# get the cluster means 
 aggregate(gadata,by=list(fit$cluster),FUN=mean)
 
-# append  and preview cluster assignment
+# append and preview the cluster's assignment
 clustered_users <- data.frame(gadata, fit$cluster)
 head(clustered_users)
 
-# visualize results in 3D chart
+# visualize the results in 3D chart
 
 #install.packages("plotly")
 library(plotly)
@@ -46,19 +46,19 @@ plot_ly(clustered_users,
         color=factor(clustered_users$fit.cluster)
 )
 
-# write results to file
+# write the results to the file
 write.csv(clustered_users, "clustered-users.csv", row.names=T)
 ```
 
 ## Results
 
-Result visualized in `plotly` package:
+The resultr visualized in the `plotly` package:
 
 ![](/assets/5_clustering.gif)
 
 ## Results - clustered users
 
-In addition to chart you get `.csv` file with userId \(fingerprint\) and created label \(number of segment\). You can use the results uploading it to your marketing systems. Example results:
+In addition to the chart, you get a `.csv` file with the userId \(fingerprint\) and predicted label \(the segment number\). You can use the results, uploading it to your marketing systems. Example of the results:
 
 ```
 > clustered_users
@@ -76,7 +76,7 @@ In addition to chart you get `.csv` file with userId \(fingerprint\) and created
 
 ## Source code
 
-Complete code for this example in GitHub repository:
+The complete source code of the examples showed above is in my GitHub repository:
 
 [github.com\/michalbrys\/R-Google-Analytics\/blob\/master\/5\_users\_segmentation.R](https://github.com/michalbrys/R-Google-Analytics/blob/master/5_users_segmentation.R)
 

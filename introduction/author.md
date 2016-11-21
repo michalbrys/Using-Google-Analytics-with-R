@@ -4,12 +4,12 @@
 
 Data scientist
 
-Michał is working in internet industry from 2009. He is expert in web analytics in e-commerce context, especially using Google Analytics & Google Tag Manager. He loves mining big data sets and transform information into actionable knowledge. 
-He loves creating story from numbers.
+Michał is working in the internet industry from 2009. He is an expert in web analytics in e-commerce context, especially using Google Analytics & Google Tag Manager. He loves mining big data sets and transforming information into useful knowledge. 
+He loves creating stories from numbers.
 He graduated AGH University of Science and Technology and University of Economics in Cracow.
-Michal is member of Google Developers Group Cracow.
+Michal is a member of Google Developers Group Cracow.
 
-Feel free to contact author:
+Feel free to contact the author:
 
 [about.me](https://about.me/michal.brys)
 

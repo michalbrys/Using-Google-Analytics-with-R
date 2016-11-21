@@ -1,6 +1,6 @@
 # Forecasting
 
-Forecast of future web traffic using Holt-Winters method. Inspired by [**Richard Fergie**](http://www.eanalytica.com/r-for-web-analysts/).
+Let's create a forecast of the future web traffic using Holt-Winters method. This example was inspired by [**Richard Fergie**](http://www.eanalytica.com/r-for-web-analysts/).
 
 ```
 # forecasting using Holt-Winters algorithm
@@ -20,7 +20,7 @@ library("ggplot2")
 library("forecast")
 library("reshape2")
 
-# authorize connection with Google Analytics servers
+# authorize the connection with Google Analytics servers
 ga_auth()
 
 ## pick a profile with data to query
@@ -40,7 +40,7 @@ timeseries <- ts(gadata$sessions, frequency=7)
 components <- decompose(timeseries)
 plot(components)
 
-# note the way we add a column to a data.frame
+# note the way we add a column to the data.frame
 gadata$adjusted <- gadata$sessions - components$seasonal
 
 theme(axis.text.x = element_text(angle = 90, hjust = 1))
@@ -72,13 +72,13 @@ ylab("Sessions")
 
 ## Result
 
-As a result you'll get chart with predictions about your web traffic.
+As a result you'll get a chart with predictions of your web traffic.
 
 ![](/assets/forecasting-chart.png)
 
 ## Source code
 
-Complete code for this example in GitHub repository:
+The complete source code of the examples showed above is in my GitHub repository:
 
 [https:\/\/github.com\/michalbrys\/R-Google-Analytics\/blob\/master\/4\_forecasting.R](https://github.com/michalbrys/R-Google-Analytics/blob/master/4_forecasting.R)
 
