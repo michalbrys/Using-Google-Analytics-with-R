@@ -2,7 +2,7 @@
 
 This book is a practical guide through the analysis of the data from Google Analytics in R.
 
-I this book you will learn:
+In this book you will learn:
 
 * What is Google Analytics and how to collect web traffic data using this tool.
 * What is R and how to analyze data from Google Analytics in R Studio.

@@ -1,6 +1,6 @@
 # Traffic heatmap
 
-We will build some more advanced data visualization. It willl be useres engagement heatmap. The darker color the highest user engagement \(avgSessionDuration\) was on this time of day. Inspired by **[Todd Moy.](http://toddmoy.com/)**
+Let's build some more advanced data visualization, that is users' engagement heatmap. The darker color means the higher user engagement \(avgSessionDuration\) in this time of the day. This example was inspired by **[Todd Moy.](http://toddmoy.com/)**
 
 ```r
 # traffic heatmap
@@ -18,7 +18,7 @@ library("googleAnalyticsR")
 library("ggplot2")
 library("RColorBrewer")
 
-# authorize connection with Google Analytics servers
+# authorize the connection with Google Analytics servers
 ga_auth()
 
 ## pick a profile with data to query
@@ -34,7 +34,7 @@ gadata <- google_analytics(id = ga_id,
                            max = 5000)
 
 
-# order data
+# order the data
 gadata$dayOfWeekName <- factor(gadata$dayOfWeekName, levels = c("Sunday", 
                                                           "Monday", 
                                                           "Tuesday", 
@@ -44,13 +44,13 @@ gadata$dayOfWeekName <- factor(gadata$dayOfWeekName, levels = c("Sunday",
                                                           "Saturday"))
 gadata[order(gadata$dayOfWeekName),]
 
-# convert data frame to xtab
+# convert the data frame to xtab
 heatmap_data <- xtabs(avgSessionDuration ~ dayOfWeekName + hour, data=gadata)
 
 
 ```
 
-When data is prepared, we'll prepare plot:
+When data is transformed to the desired outcome, it's time to prepare the plot:
 
 ```r
 # plot heatmap
@@ -67,11 +67,11 @@ And the result is:
 
 ![](/assets/6_heatmap.png)
 
-In this case - wednesday morning is the most engaging for users time of the day :\)
+In this case - Wednesday morning is the most engaging time of the day for users :\)
 
 ## Source code
 
-Complete code for this example in GitHub repository:
+The complete source code of the examples showed above is in my GitHub repository:
 
 [github.com\/michalbrys\/R-Google-Analytics\/blob\/master\/6\_heatmap.R](https://github.com/michalbrys/R-Google-Analytics/blob/master/6_heatmap.R)
 

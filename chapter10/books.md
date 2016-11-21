@@ -1,6 +1,6 @@
 # Books
 
-List of book where you can get some inspiration for further analysis, with links for free online versions:
+List of book where you can get some inspiration for some further analysis, with links for free online versions:
 
 **Cookbook for R**
 

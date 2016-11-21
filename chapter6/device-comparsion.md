@@ -1,6 +1,6 @@
 ## Device comparsion
 
-Let's check how engaged users are on different types of device. To do this, we'll plot 2 charts - describing how many sessions was made from different device types and what is avgSessionDuration \(in seconds\) on particular device type.
+Let's check how users are engaged on different types of device. To do this, we'll plot 2 charts - describing how many sessions were made from different types of devices and what is avgSessionDuration \(in seconds\) on a particular device type.
 
 ```
 # device comparsion
@@ -15,7 +15,7 @@ library("googleAuthR")
 library("googleAnalyticsR")
 library("ggplot2")
 
-# authorize connection with Google Analytics servers
+# authorize the connection with Google Analytics servers
 ga_auth()
 
 ## pick a profile with data to query
@@ -31,22 +31,22 @@ gadata <- google_analytics(id = ga_id,
                            max = 5000)
 
 
-#plot sessions with deviceCategory
+# plot sessions with deviceCategory
 ggplot(gadata, aes(deviceCategory, sessions)) +   
   geom_bar(aes(fill = deviceCategory), stat="identity")
 
-#plot avgSessionDuration with deviceCategory
+# plot avgSessionDuration with deviceCategory
 ggplot(gadata, aes(deviceCategory, avgSessionDuration)) +   
   geom_bar(aes(fill = deviceCategory), stat="identity")
 ```
 
 ![](/assets/7_bar_chart.png)
 
-In this case the longest sessions was made from mobile devices.
+In this case the longest sessions were made from mobile devices.
 
 ## Source code
 
-Complete code for this example in GitHub repository:
+The complete source code of the examples showed above is in my GitHub repository:
 
 [github.com\/michalbrys\/R-Google-Analytics\/blob\/master\/7\_device\_comparsion.R](https://github.com/michalbrys/R-Google-Analytics/blob/master/7_device_comparsion.R)
 

@@ -6,18 +6,18 @@
 
 ## Pros and cons
 
-**R language** is now the fastest growing statistic analysis language. 
+**R language** is now the fastest growing statistical analysis language. 
 
 The major **advantages** of R:
 
 - **Free**. 
 - Offers a lot of **libraries** for different statistical computations. [Actual list of packages](https://cran.r-project.org/web/packages/)
-- A lot of **educational materials** (tutorials, MOOCs, blogs) available free in the Internet.
+- A lot of **educational materials** (tutorials, MOOCs, blogs) available for free on the Internet.
 - Has big **community support**.
 - Ready to run in different **platforms** (Windows, Mac, Unix). Version for server installation is also available.
 - **Fast** because of in-memory computations.
 
 **Disadvantages**? 
 
-- R is **not out-of-the-box solution with GUI** for all analytical problems. You need to write a chunk of code to get the result. It sometimes can be barer for non-technical people to start with. But I hope if you read this book is not problem for you :)
-- The advantage of **in-memory computations is sometimes a trap**. In standard installation you can only process data set which fits to RAM memory in your machine. If you have really big data to process - think about other solution like Hadoop (MapReduce) or Apache Spark. If you feel comfortable with R you can run your script on other platforms (reading from HDFS or using SparkR). It is more advanced topic for other book ;)
+- R is **not out-of-the-box solution with GUI** for all analytical problems. You need to write a chunk of code to get the result. It sometimes can be barier for non-technical people. But I hope that once you read this book, it will not be a problem for you anymore :)
+- The advantage of **in-memory computations is sometimes a trap**. In standard installation you can only process dataset which fits to the RAM memory on your machine. If you have really big data to process - think about other solutions like Hadoop (MapReduce) or Apache Spark. If you feel comfortable with R you can run your script on other platforms (reading from HDFS or using SparkR). It is more advanced topic for another book ;)
