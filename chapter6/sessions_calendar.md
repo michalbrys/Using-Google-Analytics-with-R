@@ -73,5 +73,5 @@ In this case - Wednesday morning is the most engaging time of the day for users 
 
 The complete source code of the examples showed above is in my GitHub repository:
 
-[github.com\/michalbrys\/R-Google-Analytics\/blob\/master\/6\_heatmap.R](https://github.com/michalbrys/R-Google-Analytics/blob/master/6_heatmap.R)
+[github.com/michalbrys/R-Google-Analytics/blob/master/6_heatmap.R](https://github.com/michalbrys/R-Google-Analytics/blob/master/6_heatmap.R)
 
