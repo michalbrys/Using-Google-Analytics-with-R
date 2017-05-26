@@ -6,11 +6,11 @@ R has a big range of visualizing packages. My favourite is he `ggplot2` package.
 
 ## Package ggplot2
 
-According to [ggplot2 project site](http://ggplot2.org/):
+According to [ggplot2 project site](http://ggplot2.tidyverse.org/):
 
 > ggplot2 is a plotting system for R, based on the grammar of graphics, which tries to take the good parts of base and lattice graphics and none of the bad parts. It takes care of many of the fiddly details that make plotting a hassle \(like drawing legends\) as well as providing a powerful model of graphics that makes it easy to produce complex multi-layered graphics.
 
-Full documentation: [docs.ggplot2.org](http://docs.ggplot2.org/current/)
+Full documentation: [ggplot2.tidyverse.org](http://ggplot2.tidyverse.org/reference/)
 
 This is my favourite visualization package in R because of:
 
@@ -27,11 +27,11 @@ All of the examples presented in this book are made with the use of `ggplot2`.
 
 ### Download data to visualize it in the chart
 
-In the first, step install \(if necessary\) and load the packages in the current session:
+In the first, step install (if necessary) and load the packages in the current session:
 
 ```r
-install.packages("ggplot2")
-library("ggplot2")
+install.packages("tidyverse")
+library("tidyverse")
 ```
 
 Next, build the query to fetch the data pointing out the date and the number of session that you want to download:
@@ -65,7 +65,8 @@ head(gadata)
 Let's plot the data againts the time \(scatter plot\):
 
 ```r
-ggplot(gadata, aes(x=date, y=sessions)) +
+gadata %>%
+ggplot(aes(x=date, y=sessions)) +
   geom_point()
 ```
 
@@ -86,7 +87,8 @@ theme(axis.text.x = element_text(angle = 90, hjust = 1))
 To complete the example with rotated x-axis labels, use:
 
 ```r
-ggplot(gadata, aes(x=date, y=sessions)) +
+gadata %>%
+ggplot(aes(x=date, y=sessions)) +
   geom_point() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ```
@@ -102,7 +104,8 @@ size = sessions
 ```
 
 ```r
-ggplot(gadata, aes(x=date, y=sessions, size = sessions)) +
+gadata %>%
+ggplot(aes(x=date, y=sessions, size = sessions)) +
   geom_point() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ```
@@ -122,7 +125,8 @@ color = sessions
 The complete code presents itself as:
 
 ```r
-ggplot(gadata, aes(x=date, y=sessions, size = sessions, color = sessions)) +
+gadata %>%
+ggplot(aes(x=date, y=sessions, size = sessions, color = sessions)) +
   geom_point() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ```
@@ -138,7 +142,8 @@ This type of scatter plot is called a **bubble chart**.
 Let's plot the data against the time \(line chart\) with some styles:
 
 ```r
-ggplot(gadata,aes(x=date,y=sessions,group=1)) + 
+gadata %>%
+ggplot(aes(x=date,y=sessions,group=1)) + 
   geom_line() + 
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) 
   # some styles to rotate x-axis labels
@@ -163,7 +168,8 @@ gadata <- google_analytics(id = ga_id,
 Now we can plot the data points with a trend line added:
 
 ```r
-ggplot(data = gadata, aes(x = gadata$date,y = gadata$sessions) ) + 
+gadata %>%
+ggplot(aes(x = gadata$date,y = gadata$sessions) ) + 
   geom_point() + 
   geom_smooth() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
@@ -190,13 +196,14 @@ gadata <- google_analytics(id = ga_id,
 And vizualize it using a boxplot:
 
 ```r
-ggplot(data = gadata, aes(x = dayOfWeek, y = sessions)) + 
+gadata %>%
+ggplot(aes(x = dayOfWeek, y = sessions)) + 
   geom_boxplot()
 ```
 
 ![Sessions vs. dayOfWeek](Rplot03.png)
 
-In Google Analytics, number of days are named with the following convention:
+In Google Analytics, `dayOfWeek` are named with the following convention:
 
 ```r
 0 - Sunday
@@ -208,11 +215,11 @@ In Google Analytics, number of days are named with the following convention:
 6 - Saturday
 ```
 
-In this case, we can see that the highest traffic was on Thursday. Fridays are also not bad :\)
+In this case, we can see that the highest traffic was on Thursday. Fridays are also not bad :)
 
 ## The source code
 
 The complete source code of the examples showed above is in my GitHub repository:
 
-[github.com\/michalbrys\/R-Google-Analytics\/blob\/master\/3\_data\_visualization.R](https://github.com/michalbrys/R-Google-Analytics/blob/master/3_data_visualization.R)
+[github.com/michalbrys/R-Google-Analytics/blob/master/3_data_visualization.R](https://github.com/michalbrys/R-Google-Analytics/blob/master/3_data_visualization.R)
 
