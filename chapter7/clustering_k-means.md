@@ -52,7 +52,7 @@ write.csv(clustered_users, "clustered-users.csv", row.names=T)
 
 ## Results
 
-The resultr visualized in the `plotly` package:
+The results visualized in the `plotly` package:
 
 ![](/assets/5_clustering.gif)
 
@@ -78,5 +78,5 @@ In addition to the chart, you get a `.csv` file with the userId \(fingerprint\) 
 
 The complete source code of the examples showed above is in my GitHub repository:
 
-[github.com\/michalbrys\/R-Google-Analytics\/blob\/master\/5\_users\_segmentation.R](https://github.com/michalbrys/R-Google-Analytics/blob/master/5_users_segmentation.R)
+[github.com/michalbrys/R-Google-Analytics/blob/master/5_users_segmentation.R](https://github.com/michalbrys/R-Google-Analytics/blob/master/5_users_segmentation.R)
 
