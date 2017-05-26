@@ -44,7 +44,7 @@ After having conducted the analysis you may want to save the results in a file t
 If you want to save data from a data frame called `ga.data` you can use the following code:
 
 ```r
-write_csv(file = "exported_data.csv", ga.data)
+write_csv(ga.data, "exported_data.csv")
 ```
 
 As a result R will export data to the `.csv` file. You can open it in every text editor or spreadsheet (i.e. Microsoft Excel). The other use case is to upload data as `custom dimension` or `campaign cost data` to Google Analytics.
