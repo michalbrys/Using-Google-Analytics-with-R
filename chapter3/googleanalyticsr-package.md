@@ -19,8 +19,8 @@ To pull data from Google Analytics into R we will use **googleAnalyticsR** packa
 
 **You can read the docs of this package visiting Mark's website:**
 
-[http:\/\/code.markedmondson.me\/googleAnalyticsR\/](http://code.markedmondson.me/googleAnalyticsR/)
+[http://code.markedmondson.me/googleAnalyticsR/](http://code.markedmondson.me/googleAnalyticsR/)
 
 **or check the docs on CRAN repository:**
-[https:\/\/cran.r-project.org\/web\/packages\/googleAnalyticsR\/vignettes\/googleAnalyticsR.html](https://cran.r-project.org/web/packages/googleAnalyticsR/vignettes/googleAnalyticsR.html)
+[https://cran.r-project.org/web/packages/googleAnalyticsR/vignettes/googleAnalyticsR.html](https://cran.r-project.org/web/packages/googleAnalyticsR/vignettes/googleAnalyticsR.html)
 
