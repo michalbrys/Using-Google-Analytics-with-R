@@ -118,7 +118,7 @@ Congrats! You've downloaded the first dataset from your Google Analytics account
 
 The complete source code of the examples showed above is in my GitHub repository:
 
-[https:\/\/github.com\/michalbrys\/R-Google-Analytics\/blob\/master\/1\_hello\_world.R](https://github.com/michalbrys/R-Google-Analytics/blob/master/1_hello_world.R)
+[https://github.com/michalbrys/R-Google-Analytics/blob/master/1_hello_world.R](https://github.com/michalbrys/R-Google-Analytics/blob/master/1_hello_world.R)
 
 
 
