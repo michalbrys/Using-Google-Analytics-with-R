@@ -122,7 +122,7 @@ sd(gadata$sessions)
 [1] 22.12984
 ```
 
-The average number of sessions is equal 27.6 +\/- 22.12984. This dataset has big diversity and in that case it is better not to trust only the average value.
+The average number of sessions is equal 27.6 +/- 22.12984. This dataset has big diversity and in that case it is better not to trust only the average value.
 
 ## Median
 
@@ -162,5 +162,5 @@ As a result you will get basic statistics for numeric variables and description 
 
 The complete source code of the examples showed above is in my GitHub repository:
 
-[github.com\/michalbrys\/R-Google-Analytics\/blob\/master\/2\_eda.R](https://github.com/michalbrys/R-Google-Analytics/blob/master/2_eda.R)
+[github.com/michalbrys/R-Google-Analytics/blob/master/2_eda.R](https://github.com/michalbrys/R-Google-Analytics/blob/master/2_eda.R)
 
