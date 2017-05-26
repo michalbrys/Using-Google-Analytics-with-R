@@ -2,7 +2,7 @@
 
 Let's make some exploratory data analysis in R by visualizing the data from Google Analytics.
 
-R has a big range of visualizing packages. My favourite is he `ggplot2` package.
+R has a big range of visualizing packages. My favourite is the `ggplot2` package which is now a part of `tidyverse`.
 
 ## Package ggplot2
 
