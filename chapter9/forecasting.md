@@ -9,14 +9,14 @@ Let's create a forecast of the future web traffic using Holt-Winters method. Thi
 # install libraries
 # install.packages("googleAuthR")
 # install.packages("googleAnalyticsR")
-# install.packages("ggplot2")
+# install.packages("tidyverse")
 # install.packages("forecast")
 # install.packages("reshape2")
 
 # load libraries
 library("googleAuthR")
 library("googleAnalyticsR")
-library("ggplot2")
+library("tidyverse")
 library("forecast")
 library("reshape2")
 
@@ -61,7 +61,8 @@ forecastupper=c(rep(NA,nrow(gadata)-1),tail(gadata$sessions,1),forecastdf$"Hi 80
 forecastlower=c(rep(NA,nrow(gadata)-1),tail(gadata$sessions,1),forecastdf$"Lo 80")
 )
 
-ggplot(forecastdata, aes(x=day)) +
+forecastdata %>%
+ggplot( aes(x=day)) +
 geom_line(aes(y=actual),color="black") +
 geom_line(aes(y=forecast),color="blue") +
 geom_ribbon(aes(ymin=forecastlower,ymax=forecastupper), alpha=0.4, fill="green") +
@@ -80,5 +81,5 @@ As a result you'll get a chart with predictions of your web traffic.
 
 The complete source code of the examples showed above is in my GitHub repository:
 
-[https:\/\/github.com\/michalbrys\/R-Google-Analytics\/blob\/master\/4\_forecasting.R](https://github.com/michalbrys/R-Google-Analytics/blob/master/4_forecasting.R)
+[https://github.com/michalbrys/R-Google-Analytics/blob/master/4_forecasting.R](https://github.com/michalbrys/R-Google-Analytics/blob/master/4_forecasting.R)
 

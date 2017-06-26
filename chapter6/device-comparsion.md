@@ -1,6 +1,9 @@
 ## Device comparsion
 
-Let's check how users are engaged on different types of device. To do this, we'll plot 2 charts - describing how many sessions were made from different types of devices and what is avgSessionDuration \(in seconds\) on a particular device type.
+Let's check how users are engaged on different types of device. To do this, we'll plot 2 charts:
+
+1. Describing how many `sessions` were made from different types of devices
+2. What is `avgSessionDuration` (in seconds) on a particular device type.
 
 ```
 # device comparsion
@@ -8,12 +11,12 @@ Let's check how users are engaged on different types of device. To do this, we'l
 # install libraries
 # install.packages("googleAuthR")
 # install.packages("googleAnalyticsR")
-# install.packages("ggplot2")
+# install.packages("tidyverse")
 
 # load libraries
 library("googleAuthR")
 library("googleAnalyticsR")
-library("ggplot2")
+library("tidyverse")
 
 # authorize the connection with Google Analytics servers
 ga_auth()
@@ -31,12 +34,14 @@ gadata <- google_analytics(id = ga_id,
                            max = 5000)
 
 
-# plot sessions with deviceCategory
-ggplot(gadata, aes(deviceCategory, sessions)) +   
+# plot sessions with `deviceCategory`
+gadata %>%
+ggplot(aes(deviceCategory, sessions)) +   
   geom_bar(aes(fill = deviceCategory), stat="identity")
 
-# plot avgSessionDuration with deviceCategory
-ggplot(gadata, aes(deviceCategory, avgSessionDuration)) +   
+# plot avgSessionDuration with `deviceCategory`
+gadata %>%
+ggplot(aes(deviceCategory, avgSessionDuration)) +   
   geom_bar(aes(fill = deviceCategory), stat="identity")
 ```
 
@@ -48,5 +53,5 @@ In this case the longest sessions were made from mobile devices.
 
 The complete source code of the examples showed above is in my GitHub repository:
 
-[github.com\/michalbrys\/R-Google-Analytics\/blob\/master\/7\_device\_comparsion.R](https://github.com/michalbrys/R-Google-Analytics/blob/master/7_device_comparsion.R)
+[github.com/michalbrys/R-Google-Analytics/blob/master/7_device_comparsion.R](https://github.com/michalbrys/R-Google-Analytics/blob/master/7_device_comparsion.R)
 

@@ -30,9 +30,11 @@ Copy this code to R Studio and click `Knit HTML` icon. This code will generate H
     date_end <- "2016-06-30"
 
     #install.packages("googleAnalyticsR")
-    #install.packages("ggplot2")
+    #install.packages("tidyverse")
+    #install.packages("googleAuthR")
     library("googleAnalyticsR")
-    library("ggplot2")
+    library("tidyverse")
+    library("googleAuthR")
 
     #Run once from the console, then generate knitr document
     ga_auth()
@@ -49,7 +51,8 @@ Copy this code to R Studio and click `Knit HTML` icon. This code will generate H
                                max = 5000)
 
     # scatter plot with a trend line
-    ggplot(data = gadata, aes(x = gadata$date,y = gadata$sessions) ) + 
+    gadata %>%
+    ggplot(aes(x = gadata$date,y = gadata$sessions) ) + 
       geom_point() + 
       geom_smooth() +
       theme(axis.text.x = element_text(angle = 90, hjust = 1))
@@ -67,11 +70,13 @@ Copy this code to R Studio and click `Knit HTML` icon. This code will generate H
 
 
     #plot sessions against deviceCategory
-    ggplot(gadata2, aes(deviceCategory, sessions)) +   
+    gadata2 %>%
+    ggplot(aes(deviceCategory, sessions)) +   
       geom_bar(aes(fill = deviceCategory), stat="identity")
 
     #plot avgSessionDuration against deviceCategory
-    ggplot(gadata2, aes(deviceCategory, avgSessionDuration)) +   
+    gadata2 %>%
+    ggplot(aes(deviceCategory, avgSessionDuration)) +   
       geom_bar(aes(fill = deviceCategory), stat="identity")
     ```
 
@@ -87,5 +92,5 @@ For recurring reporting you can only change dates :\)
 
 The complete source code of the examples showed above is in my GitHub repository:
 
-[github.com\/michalbrys\/R-Google-Analytics\/blob\/master\/8\_rmarkdown\_report.Rmd](https://github.com/michalbrys/R-Google-Analytics/blob/master/8_rmarkdown_report.Rmd)
+[github.com/michalbrys/R-Google-Analytics/blob/master/8_rmarkdown_report.Rmd](https://github.com/michalbrys/R-Google-Analytics/blob/master/8_rmarkdown_report.Rmd)
 
